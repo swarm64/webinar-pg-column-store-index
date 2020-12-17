@@ -1,0 +1,9 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:${PSQL_VERSION}
+    container_name: postgresql-${PSQL_VERSION}
+    volumes:
+      - ${DATA_PSQL}:/data
+    ports:
+      - ${POSTGRES_HOST}:${DB_PORT_PSQL}:5432
